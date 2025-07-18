@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
 import SplashScreen from './SplashScreen';
 import ChatApp from './ChatApp';
-
 function AppWrapper() {
   const [showSplash, setShowSplash] = useState(true);
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
   useEffect(() => {
-    const timer = setTimeout(() => setShowSplash(false), 5000); // 5 seconds
+    const timer = setTimeout(() => setShowSplash(false), 5000);
     return () => clearTimeout(timer);
   }, []);
   useEffect(() => {

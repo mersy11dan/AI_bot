@@ -1,0 +1,110 @@
+.chat-sidebar {
+  width: 250px;
+  min-width: 200px;
+  max-width: 300px;
+  background: var(--sidebar-bg, #f5f5f5);
+  color: var(--sidebar-text, #222);
+  padding: 24px 16px;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  z-index: 1002;
+}
+
+.chat-sidebar.dark {
+  background: #23232b;
+  color: #fff;
+  border-right: 1px solid #333;
+}
+
+.chat-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-close-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-left: 8px;
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .chat-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    box-shadow: none;
+    border-right: none;
+    border-bottom: none;
+    background: var(--sidebar-bg, #f5f5f5);
+    z-index: 1002;
+    max-width: 80vw;
+    min-width: 0;
+    width: 80vw;
+  }
+  .chat-sidebar.open {
+    transform: translateX(0);
+    box-shadow: 2px 0 16px rgba(0,0,0,0.18);
+  }
+  .chat-sidebar.dark {
+    background: #23232b;
+    color: #fff;
+    border-right: none;
+  }
+}
+
+/* Hamburger styles */
+.chat-app-hamburger-container {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 1100;
+}
+
+.chat-app-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.hamburger-bar {
+  width: 28px;
+  height: 4px;
+  background: #888;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+@media (max-width: 900px) {
+  .chat-app-hamburger {
+    display: flex;
+  }
+}
+
+.chat-sidebar .chat-history-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.chat-history-placeholder {
+  color: #888;
+  font-style: italic;
+} 

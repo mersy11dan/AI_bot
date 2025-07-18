@@ -12,4 +12,15 @@
   .chat-window {
     padding: 1rem 0.5rem 0.5rem 0.5rem;
   }
+}
+
+.chat-window-placeholder {
+  text-align: center;
+  color: #888;
+}
+
+.typing-indicator {
+  color: #888;
+  font-style: italic;
+  margin: 8px 0;
 } 

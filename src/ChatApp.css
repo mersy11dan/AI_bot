@@ -1,19 +1,46 @@
-.chat-app {
+.chat-app-layout {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100vh;
   background: transparent;
-  max-width: 600px;
+}
+
+.chat-app-main {
+  display: flex;
+  flex-direction: column;
+  flex: 2 1 0%;
+  max-width: 900px;
   margin: 0 auto;
   box-shadow: 0 2px 16px rgba(0,0,0,0.08);
   border-radius: 18px;
   overflow: hidden;
+  background: transparent;
 }
-@media (max-width: 700px){
-  .chat-app{
+
+.chat-sidebar {
+  width: 180px;
+  min-width: 120px;
+  max-width: 220px;
+}
+
+@media (max-width: 900px) {
+  .chat-app-layout {
+    flex-direction: column;
+  }
+  .chat-app-main {
     max-width: 100vw;
     border-radius: 0;
     box-shadow: none;
+  }
+  .chat-sidebar {
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    flex-direction: row;
+    padding: 12px 8px;
   }
 }
 @media (max-width: 480px) {
