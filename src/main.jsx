@@ -5,6 +5,6 @@ import AppWrapper from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AppWrapper/>
+  <AppWrapper/>
   </StrictMode>,
 )

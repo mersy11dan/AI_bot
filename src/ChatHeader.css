@@ -1,0 +1,48 @@
+.chat-header {
+  background: #fff;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  justify-content: space-between;
+}
+.chat-header.dark {
+  background: #222;
+  border-bottom: 1px solid #444;
+}
+.chat-header .logo {
+  height: 75px;
+  width: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: -10px;
+}
+
+.lamp-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  margin-left: 16px;
+  transition: filter 0.2s;
+}
+
+@media (max-width: 700px) {
+  .chat-header {
+    border-radius: 0;
+  }
+  .chat-header .logo {
+    height: 48px;
+    width: 48px;
+  }
+}
+@media (max-width: 480px) {
+  .chat-header {
+    padding: 0.5rem;
+  }
+  .chat-header .logo {
+    height: 40px;
+    width: 40px;
+  }
+} 

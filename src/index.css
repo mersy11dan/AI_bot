@@ -16,23 +16,4 @@ body {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
-}
-
-.chat-app {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background: transparent;
-}
-
-.chat-header {
-  background: #fff;
-}
-
-.chat-window {
-  background: transparent;
-}
-
-.chat-input {
-  background: #fff;
 } 

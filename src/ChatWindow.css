@@ -1,0 +1,15 @@
+.chat-window {
+  background: transparent;
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .chat-window {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+  }
+} 
