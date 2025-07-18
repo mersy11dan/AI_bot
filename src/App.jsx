@@ -7,7 +7,7 @@ function AppWrapper() {
   useEffect(() => {
     const timer = setTimeout(() => setShowSplash(false), 5000);
     return () => clearTimeout(timer);
-  }, []);
+  },[]);
   useEffect(() => {
     localStorage.setItem('theme', theme);
     document.body.style.background = theme === 'dark' ? '#222' : '#ede8ee';

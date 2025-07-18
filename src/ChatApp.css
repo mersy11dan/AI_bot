@@ -4,7 +4,6 @@
   height: 100vh;
   background: transparent;
 }
-
 .chat-app-main {
   display: flex;
   flex-direction: column;
@@ -16,7 +15,6 @@
   overflow: hidden;
   background: transparent;
 }
-
 .chat-sidebar {
   width: 180px;
   min-width: 120px;
