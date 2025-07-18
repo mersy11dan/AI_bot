@@ -4,21 +4,23 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
 
-  // 1) Force Vite to pre‑bundle the icon package so it can be resolved:
+  // Pre-bundle react‑icons so Rollup can see every sub‑path
   optimizeDeps: {
     include: [
-      'react-icons',      // prebundle the whole package
-      'react-icons/fa'    // and the sub‑entry you’re using
+      'react-icons',
+      'react-icons/fa',
+      'react-icons/fi'
     ]
   },
 
-  // 2) (Only if you’re building a library or SSR bundle  
-  // and want to keep it OUT of your final bundle)
+  // (Only if you truly want to externalize them in your build)
   build: {
     rollupOptions: {
       external: [
-        'react-icons',     // treat the package as external
-        'react-icons/fa'   // and its sub‑entry
+        // remove these lines if you want the icons bundled into your app
+        'react-icons',
+        'react-icons/fa',
+        'react-icons/fi'
       ]
     }
   }
